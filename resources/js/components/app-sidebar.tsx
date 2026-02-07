@@ -19,12 +19,12 @@ import AppLogo from './app-logo';
 const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
-        href: '/product',
+        href: '/dashboard',
         icon: LayoutGrid,
     },
     {
         title: 'Product',
-        href: '/product',
+        href: '/products',
         icon: PackageSearch,
     },
 ];
