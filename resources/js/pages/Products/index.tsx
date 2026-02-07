@@ -12,7 +12,7 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table"
+} from "@/components/ui/table";
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -85,7 +85,8 @@ export default function Index() {
                                     <TableCell>{product.name}</TableCell>
                                     <TableCell>{product.price}</TableCell>
                                     <TableCell>{product.description}</TableCell>
-                                    <TableCell className="text-center">
+                                    <TableCell className="text-center space-x-2">
+                                        <Link href={`/products/${product.id}/edit`}><Button className='bg-slate-600 hover:bg-slate-700'>Edit</Button></Link>
                                         <Button disabled={processing} onClick={() => handleDelete(product.id, product.name)} className="bg-red-500 hover:bg-red-700">Delete</Button>
                                     </TableCell>
                                 </TableRow>
