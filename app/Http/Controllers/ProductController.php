@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index(){
-        return Inertia::render('Products/index', []);
+        $products = Product::all();
+        return Inertia::render('Products/index', compact('products'));
     }
 
     public function create(){
