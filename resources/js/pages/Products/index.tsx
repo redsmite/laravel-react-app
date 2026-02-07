@@ -1,6 +1,6 @@
-import { Head } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
+import { Button } from '@/components/ui/button';
 import AppLayout from '@/layouts/app-layout';
-import { dashboard } from '@/routes';
 import type { BreadcrumbItem } from '@/types';
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -13,9 +13,11 @@ const breadcrumbs: BreadcrumbItem[] = [
 export default function Index() {
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
-            <Head title="Dashboard" />
-            <div>
-                <h1>Pekpek ni Shin</h1>
+            <Head title="Products" />
+            <div className='p-4'>
+                <Link href="/products/create">
+                    <Button>Create a Product</Button>
+                </Link>
             </div>
         </AppLayout>
     );
